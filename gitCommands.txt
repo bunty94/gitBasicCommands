@@ -1,0 +1,141 @@
+what is git ? a version control system.git saves all this files changes to a directory as a compressed database. then we can modify them in a working directory.we can then save these changes in the staging area.when you commit saved changes are saved to git directory.
+
+local version control: changes stored in compressed directory in local system
+centralized version control: changes saved in server.
+distributed version control: different servers if the centralized server is lost can take a backup.
+
+
+Modified Files: Files recently changed.
+
+Staged Files: Files marked to be changed.
+
+Committed Files: Have been saved.
+
+installation git:
+
+http://mysysgit.github.io/
+
+run with default options and install. check for git gui and git bash while installing.
+
+open gitbash.
+
+git config --global user.name "Derek Banas"
+
+git config --global user.email derekbanas@verizon.net
+
+to use wrangler as editor
+git config --global core.editor "edit -w"
+
+to use vim as editor
+git config --global core.editor "vim"
+
+to see all changes done to the editor.
+git config --list
+
+website for git ignore file to specific framework or project.
+
+https://github.com/github/gitignore
+
+
+git help
+
+git help add to see add documentation.
+
+git status ==== status of all the files
+
+git add filename or 
+git add * stages all files
+git add . --  stage files
+
+git commit -m 'initial commit'  easy way to do
+or 
+git commit ==== will opens a vim. press escape I,insert the message to commit. press escape :wq.
+
+Staging and commiting in single step.
+
+git commit -a -m 'commit changes'.
+
+removing a file :
+
+git rm --cached filename ===== removes from staging but existing in the working directory.
+or 
+git rm -f filename =====  -f is force delete. this is when you added to staging but now want to delete them from staging and from directory.
+
+
+renameing file after staging:
+
+git add filename
+
+git commit -m 'file added'
+
+git mv filename  newfilename
+
+git status
+
+To get logs of previous changes.
+git log --pretty=format:"%h : %an : %ar : %s"
+
+git log --since=1.w ==== week data
+
+git log --since="2014-04-12" =====specific date
+
+git log --author=name
+
+git log --before=date
+
+example: 
+git log --since=1.w --pretty=format:"%h : %an : %ar : %s"
+
+
+undo a commit to change a messge.
+
+git commit --amend. it opens a vim.press esc then i. type new message. press esc then :wq
+
+undo stage.
+git add filename
+git reset HEAD filename
+git status
+
+
+
+REMORTE REPOSITORY:
+
+create account github.com
+
+create repostory.
+
+git init
+
+git add .
+
+git remote add origin repo url
+git push origin master
+provide usename/password
+
+git remote -v === to list all remotes connected.
+
+git remote fetch origin === get data from remote but not merge with the working code.
+
+git pull repourl === gets data and merges the code.
+
+
+*****files can also be edited directly in github location.
+
+*****Using Tags to version different version and push only specific tag****
+
+CLONE GIT REPO:
+
+fork the repo you want to clone.
+
+git clone ur clone url.
+
+
+GIT MERGE CONFLICTS,BRANCHING:
+
+Branching : take a code without affecting the code.
+
+
+
+
+
+ 
