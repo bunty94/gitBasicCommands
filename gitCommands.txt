@@ -1,3 +1,12 @@
+git clone -b <branchName> <gitlink>
+git status
+git checkout -b <newBranchName>
+git add .
+git commit -m "comments"
+git push origin <newBranchName>
+git pull origin <branchName>
+
+
 what is git ? a version control system.git saves all this files changes to a directory as a compressed database. then we can modify them in a working directory.we can then save these changes in the staging area.when you commit saved changes are saved to git directory.
 
 local version control: changes stored in compressed directory in local system
